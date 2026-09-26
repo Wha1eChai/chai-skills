@@ -16,7 +16,13 @@ The entry point is [`SKILL.md`](SKILL.md). It routes decisions to selected files
 
 ### Install and use
 
-Clone [chai-skills](https://github.com/Wha1eChai/chai-skills) and copy this **entire `interface-design/` directory** into an Agent Skills-compatible location, preserving `SKILL.md` and `references/`. For Pi, use `~/.agents/skills/interface-design/` (user) or `<project>/.agents/skills/interface-design/` (project). Start a new Pi session or run `/reload`; call `/skill:interface-design` to select it explicitly. Other agents may use different paths or invocation syntax.
+Use the [skills CLI](https://github.com/vercel-labs/skills) to install this skill without manually cloning the repository (Node.js required):
+
+```bash
+npx skills add Wha1eChai/chai-skills --skill interface-design
+```
+
+Choose a supported agent and install scope when prompted. For a non-interactive, user-level Pi install, use `npx skills add Wha1eChai/chai-skills --skill interface-design -a pi -g -y`. To preview what the repository offers, run `npx skills add Wha1eChai/chai-skills --list` (no install). If you prefer manual installation, copy the **whole `interface-design/` folder**, including `SKILL.md` and `references/`, to `~/.agents/skills/` or `<project>/.agents/skills/` for Pi. Start a new Pi session or run `/reload`; call `/skill:interface-design` to select it explicitly. Other agents may use different paths or invocation syntax.
 
 Example requests:
 
@@ -42,7 +48,13 @@ The skill supplies methods, not project facts or permissions. Project requiremen
 
 ### 安装与使用
 
-克隆 [chai-skills](https://github.com/Wha1eChai/chai-skills)，将**整个 `interface-design/` 目录**复制到支持 Agent Skills 的位置，并保留 `SKILL.md` 与 `references/`。使用 Pi 时，可安装到 `~/.agents/skills/interface-design/`（当前用户）或 `<project>/.agents/skills/interface-design/`（单个项目）。启动新会话或运行 `/reload`；需要明确调用时使用 `/skill:interface-design`。其他 Agent 的安装路径和调用方式可能不同。
+推荐用 [skills CLI](https://github.com/vercel-labs/skills) 安装，无须手动克隆整个仓库（需要 Node.js）：
+
+```bash
+npx skills add Wha1eChai/chai-skills --skill interface-design
+```
+
+按提示选择目标 Agent 与安装范围。免交互安装到 Pi 的用户级目录，可用 `npx skills add Wha1eChai/chai-skills --skill interface-design -a pi -g -y`。仅查看仓库中的 skill、暂不安装，可运行 `npx skills add Wha1eChai/chai-skills --list`。若选择手动安装，需将**整个 `interface-design/` 目录**（包括 `SKILL.md` 和 `references/`）复制到 Pi 的 `~/.agents/skills/` 或 `<project>/.agents/skills/`。启动新 Pi 会话或运行 `/reload` 后，可用 `/skill:interface-design` 明确调用。其他 Agent 的安装路径或调用方式可能不同。
 
 示例请求：
 
